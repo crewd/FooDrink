@@ -1,19 +1,21 @@
 {
   "files": {
-    "main.js": "/fooDrink/static/js/main.254e8238.chunk.js",
-    "main.js.map": "/fooDrink/static/js/main.254e8238.chunk.js.map",
+    "main.js": "/fooDrink/static/js/main.d54d4f55.chunk.js",
+    "main.js.map": "/fooDrink/static/js/main.d54d4f55.chunk.js.map",
     "runtime-main.js": "/fooDrink/static/js/runtime-main.52500c58.js",
     "runtime-main.js.map": "/fooDrink/static/js/runtime-main.52500c58.js.map",
-    "static/js/2.39441273.chunk.js": "/fooDrink/static/js/2.39441273.chunk.js",
-    "static/js/2.39441273.chunk.js.map": "/fooDrink/static/js/2.39441273.chunk.js.map",
+    "static/js/2.a3762369.chunk.js": "/fooDrink/static/js/2.a3762369.chunk.js",
+    "static/js/2.a3762369.chunk.js.map": "/fooDrink/static/js/2.a3762369.chunk.js.map",
     "index.html": "/fooDrink/index.html",
-    "precache-manifest.5b7f6ba629f4f6e3c33371bbfc26628b.js": "/fooDrink/precache-manifest.5b7f6ba629f4f6e3c33371bbfc26628b.js",
+    "precache-manifest.ae10537537b8301b18eb38ae64107f9c.js": "/fooDrink/precache-manifest.ae10537537b8301b18eb38ae64107f9c.js",
     "service-worker.js": "/fooDrink/service-worker.js",
-    "static/js/2.39441273.chunk.js.LICENSE.txt": "/fooDrink/static/js/2.39441273.chunk.js.LICENSE.txt"
+    "static/js/2.a3762369.chunk.js.LICENSE.txt": "/fooDrink/static/js/2.a3762369.chunk.js.LICENSE.txt",
+    "static/media/github-icon.png": "/fooDrink/static/media/github-icon.fbddf5fd.png",
+    "static/media/main.jpg": "/fooDrink/static/media/main.ce02215e.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.52500c58.js",
-    "static/js/2.39441273.chunk.js",
-    "static/js/main.254e8238.chunk.js"
+    "static/js/2.a3762369.chunk.js",
+    "static/js/main.d54d4f55.chunk.js"
   ]
 }
