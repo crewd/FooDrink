@@ -20,16 +20,37 @@ function Nav() {
     width: 100%;
     display: flex;
     justify-content: center;
-    color: #fff;
+    color: white;
     font-weight: bold;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 20;
-    background: ${navColor ? "#33A779" : "transparent"};
+    background: ${navColor ? "white" : "transparent"};
+    ${navColor && "box-shadow: rgb(238, 238, 238) 0px 1px 0px 0px"};
+    color: ${navColor ? "black" : "white"};
 
     @media only screen and (max-width: 768px) {
-      background: #33a779;
+      background: #3C9EFF;
+    }
+  `;
+
+  const NavBar = styled.div`
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    > div {
+      padding: 24px;
+      font-size: 24px;
+      color: ${navColor ? "#3C9EFF" : "white"};
+    }
+
+    @media only screen and (max-width: 768px) {
+      > div {
+        padding: 0 12px;
+        line-height: 80px;
+        color: white;
+      }
     }
   `;
 
@@ -84,6 +105,9 @@ function Nav() {
         margin-left: 96px;
         position: relative;
 
+        animation-duration: 3s;
+        animation-name: slidein;
+
         &:last-child {
           width: 120px;
         }
@@ -104,6 +128,16 @@ function Nav() {
         &:hover::before {
           visibility: visible;
           transform: scaleX(1);
+        }
+
+        @keyframes slidein {
+          from {
+            top: 0;
+          }
+
+          to {
+            top: 100%;
+          }
         }
       }
     }
@@ -136,23 +170,6 @@ function Nav() {
     </Header>
   );
 }
-
-const NavBar = styled.div`
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  > div {
-    padding: 24px;
-    font-size: 24px;
-  }
-
-  @media only screen and (max-width: 768px) {
-    > div {
-      padding: 0 12px;
-      line-height: 80px;
-    }
-  }
-`;
 
 const MenuBtn = styled.button`
   display: none;

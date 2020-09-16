@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Nav from "./Nav";
 import styled, { createGlobalStyle } from "styled-components";
 import Home from "./Home";
+import About from "./About";
 import ContractUS from "./ContactUs";
 import Footer from "./Footer";
 
@@ -27,6 +28,7 @@ function App() {
       <GlobalStyle />
       <Nav />
       <Home />
+      <About />
       <ContractUS />
       <Footer />
     </div>

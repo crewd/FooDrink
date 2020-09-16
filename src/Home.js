@@ -48,7 +48,7 @@ const StartBtn = styled.button `
   margin-top: 80px;
   width: 200px;
   height:70px;
-  background-color: #33A779;
+  background-color: #3C9EFF;
   border: none;
   border-radius: 15px;
   font-size: 21px;

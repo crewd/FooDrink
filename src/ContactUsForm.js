@@ -33,7 +33,7 @@ const CUform = styled.div`
   >button {
     width: 200px;
     height: 70px;
-    background-color: #339ba7;
+    background-color: #3C9EFF;
     border: none;
     border-radius: 10px;
     color: white;

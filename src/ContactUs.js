@@ -29,15 +29,15 @@ function ContactUs() {
 
 const ContactUsSection = styled.section`
   width: 100%;
-  height: 200px;
-  background-color: #339ba7;
+  height: 150px;
+  background-color: #3C9EFF;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
   color: #fff;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 40px;
   line-height: 50px;
   position:relative;
   z-index: 10;
