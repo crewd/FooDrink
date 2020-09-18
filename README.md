@@ -12,3 +12,9 @@ Contact Us Form 구성
 
 >### Day4
 Contact Us Form 버튼 추가 / Footer 기본 구성
+
+>### Day5
+전체적인 color 변경, About 예시 추가
+
+>### Day6 
+Result 틀 추가
