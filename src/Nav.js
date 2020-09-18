@@ -72,7 +72,7 @@ function Nav() {
         height: 2px;
         bottom: 0;
         left: 0;
-        background-color: #fff;
+        background-color: ${navColor ? "#000" : "#fff"};
         visibility: hidden;
         transform: scaleX(0);
         transition: all 0.2s ease-in-out 0s;

@@ -5,29 +5,23 @@ import Home from "./Home";
 import About from "./About";
 import ContractUS from "./ContactUs";
 import Footer from "./Footer";
+import Result from "./Result";
 
 
 const GlobalStyle = createGlobalStyle`
-	body {
+	body, h1, h2, p {
 		padding: 0;
 		margin: 0;
 	}
-  h2 {
-    margin: 0;
-  }
-
-  p {
-    margin: 0;
-  }
 `;
 
 function App() {
-  const [CUform, setCUform] = useState(false);
   return (
     <div>
       <GlobalStyle />
       <Nav />
       <Home />
+      <Result />
       <About />
       <ContractUS />
       <Footer />
