@@ -1,6 +1,10 @@
 ## FooDrink
  술과 어울리는 음식을 찾아주는 프로젝트
 
+ # git hosting
+ $ npm run deploy
+
+
 > ### Day1
 header, nav 구성
 

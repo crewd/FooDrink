@@ -5,7 +5,7 @@ import Home from "./Home";
 import About from "./About";
 import ContractUS from "./ContactUs";
 import Footer from "./Footer";
-import Result from "./Result";
+import Result from "./result/Result_Beer";
 
 
 const GlobalStyle = createGlobalStyle`
