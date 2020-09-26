@@ -22,3 +22,9 @@ Contact Us Form 버튼 추가 / Footer 기본 구성
 
 >### Day6 
 Result 틀 추가
+
+>### Day7 
+json 추가
+
+>### Day8 
+텍스트 입력창 추가, 입력 값에 따라 검색어 결과 값 출력

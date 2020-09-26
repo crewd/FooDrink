@@ -6,6 +6,7 @@ import About from "./About";
 import ContractUS from "./ContactUs";
 import Footer from "./Footer";
 import Result from "./result/Result_Beer";
+import Search from "./Search";
 
 
 const GlobalStyle = createGlobalStyle`
@@ -21,6 +22,7 @@ function App() {
       <GlobalStyle />
       <Nav />
       <Home />
+      <Search />
       <Result />
       <About />
       <ContractUS />
