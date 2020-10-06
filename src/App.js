@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Nav from "./Nav";
+import Nav from "./components/Nav";
 import styled, { createGlobalStyle } from "styled-components";
-import Home from "./Home";
-import About from "./About";
-import ContractUS from "./ContactUs";
-import Footer from "./Footer";
-import Result from "./result/Result_Beer";
-import Search from "./Search";
+import Home from "./components/Home";
+import About from "./components/About";
+import ContractUS from "./components/ContactUs";
+import Footer from "./components/Footer";
+import Search from "./components/Search";
+import Result from "./result/Result";
 
 
 const GlobalStyle = createGlobalStyle`
@@ -23,7 +23,6 @@ function App() {
       <Nav />
       <Home />
       <Search />
-      <Result />
       <About />
       <ContractUS />
       <Footer />
