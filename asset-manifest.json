@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/fooDrink/static/js/main.8632506c.chunk.js",
-    "main.js.map": "/fooDrink/static/js/main.8632506c.chunk.js.map",
+    "main.js": "/fooDrink/static/js/main.b00272f4.chunk.js",
+    "main.js.map": "/fooDrink/static/js/main.b00272f4.chunk.js.map",
     "runtime-main.js": "/fooDrink/static/js/runtime-main.a99a3a92.js",
     "runtime-main.js.map": "/fooDrink/static/js/runtime-main.a99a3a92.js.map",
     "static/js/2.e66871e8.chunk.js": "/fooDrink/static/js/2.e66871e8.chunk.js",
     "static/js/2.e66871e8.chunk.js.map": "/fooDrink/static/js/2.e66871e8.chunk.js.map",
     "index.html": "/fooDrink/index.html",
-    "precache-manifest.2431a6f0055091296850d19286d48eb7.js": "/fooDrink/precache-manifest.2431a6f0055091296850d19286d48eb7.js",
+    "precache-manifest.985eb9e6ee4ec1c6eff2e7e1bb636c31.js": "/fooDrink/precache-manifest.985eb9e6ee4ec1c6eff2e7e1bb636c31.js",
     "service-worker.js": "/fooDrink/service-worker.js",
     "static/js/2.e66871e8.chunk.js.LICENSE.txt": "/fooDrink/static/js/2.e66871e8.chunk.js.LICENSE.txt",
     "static/media/about-1.jpg": "/fooDrink/static/media/about-1.5f6870ce.jpg",
@@ -17,6 +17,6 @@
   "entrypoints": [
     "static/js/runtime-main.a99a3a92.js",
     "static/js/2.e66871e8.chunk.js",
-    "static/js/main.8632506c.chunk.js"
+    "static/js/main.b00272f4.chunk.js"
   ]
 }
