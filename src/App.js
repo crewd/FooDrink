@@ -23,9 +23,9 @@ function App() {
       <GlobalStyle />
       <Router>
         <Route path="/" component={Nav} /> 
-        <Route path="/" exact component={Home} />
-        <Route path="/" exact component={About} />
-        <Route path="/" exact component={ContractUS} />
+        <Route path="/foodRink" exact component={Home} />
+        <Route path="/foodRink" exact component={About} />
+        <Route path="/foodRink" exact component={ContractUS} />
         <Route path="/search" component={Search} />
         <Route path="/" component={Footer} /> 
       </Router>

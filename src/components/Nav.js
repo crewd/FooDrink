@@ -157,7 +157,7 @@ function Nav({ history }) {
   return (
     <Header>
       <NavBar>
-        <div onClick={() => history.push('/')}>FooDrink</div>
+        <div onClick={() => history.push('/foodRink')}>FooDrink</div>
         <MenuBtn
           onClick={() => {
             if (!menu) {
@@ -172,7 +172,7 @@ function Nav({ history }) {
           <span />
         </MenuBtn>
         <NavUl>
-          <li onClick={() => history.push('/')}>Home</li>
+          <li onClick={() => history.push('/foodRink')}>Home</li>
           <li onClick={() => history.push('/search')}>Start</li>
           <li>About</li>
           <li>Contact Us</li>
