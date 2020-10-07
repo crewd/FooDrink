@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import styled, { createGlobalStyle } from "styled-components";
 import Home from "./components/Home";
@@ -18,14 +19,16 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   return (
-    <div>
+    <div style={{position: "relative"}}>
       <GlobalStyle />
-      <Nav />
-      <Home />
-      <Search />
-      <About />
-      <ContractUS />
-      <Footer />
+      <Router>
+        <Route path="/" component={Nav} /> 
+        <Route path="/" exact component={Home} />
+        <Route path="/" exact component={About} />
+        <Route path="/" exact component={ContractUS} />
+        <Route path="/search" component={Search} />
+        <Route path="/" component={Footer} /> 
+      </Router>
     </div>
   );
 }

@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import mainImage from "../img/main.jpg";
 
-function Home() {
+function Home({history}) {
   return (
     <TextDiv>
       <ColorOverlay>
         <p>FooDrink</p>
-        <StartBtn>FooDrink 시작하기</StartBtn>
+        <StartBtn onClick={() => history.push('/search')}>FooDrink <br /> 시작하기</StartBtn>
       </ColorOverlay>
     </TextDiv>
   );
@@ -46,7 +46,7 @@ const ColorOverlay = styled.div `
 
 const StartBtn = styled.button `
   margin-top: 80px;
-  width: 250px;
+  width: 200px;
   height:100px;
   background-color: #3C9EFF;
   border: none;
@@ -56,6 +56,7 @@ const StartBtn = styled.button `
   color: white;
   outline: none;
   cursor: pointer;
+  line-height: 30px;
 `
 
 export default Home;

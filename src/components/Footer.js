@@ -19,6 +19,7 @@ const FooterDiv = styled.div`
   justify-content: center;
   align-items: center;
   color: white;
+  position: absolute;
 `
 
 const GitIcon = styled.img `

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-function Nav() {
+function Nav({ history }) {
   const [navColor, setnavColor] = useState(false);
 
   window.addEventListener("scroll", () => {
@@ -13,6 +14,15 @@ function Nav() {
       setnavColor(false);
     }
   });
+
+  
+
+  const scrollAbout = () => {
+    window.addEventListener("scroll", () => {
+      const location = document.querySelector("#about").offsetTop;
+      window.scrollTo({top:location, behavior:'smooth'});
+    })
+  }
 
   const [menu, setMenu] = useState(false);
 
@@ -43,6 +53,7 @@ function Nav() {
       padding: 24px;
       font-size: 24px;
       color: ${navColor ? "#3C9EFF" : "white"};
+      cursor: pointer;
     }
 
     @media only screen and (max-width: 768px) {
@@ -146,7 +157,7 @@ function Nav() {
   return (
     <Header>
       <NavBar>
-        <div>FooDrink</div>
+        <div onClick={() => history.push('/')}>FooDrink</div>
         <MenuBtn
           onClick={() => {
             if (!menu) {
@@ -161,8 +172,8 @@ function Nav() {
           <span />
         </MenuBtn>
         <NavUl>
-          <li>Home</li>
-          <li>Start</li>
+          <li onClick={() => history.push('/')}>Home</li>
+          <li onClick={() => history.push('/search')}>Start</li>
           <li>About</li>
           <li>Contact Us</li>
         </NavUl>

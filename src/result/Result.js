@@ -8,11 +8,11 @@ const Result = ({value}) => {
   let FooDrink = "";
 
   if(value === "맥주") {
-    FooDrink = drink.beer;
+    FooDrink = drink.맥주;
   } else if (value === "소주") {
-    FooDrink = drink.soju;
+    FooDrink = drink.소주;
   } else if (value === "막걸리") {
-    FooDrink = drink.makgeolli;
+    FooDrink = drink.막걸리;
   } else {
     FooDrink = drink.noneResult;
   }
@@ -33,12 +33,12 @@ const Result = ({value}) => {
   });
 
   return (
-    <Tabs defaultActiveKey="0" size="large" centered tabBarStyle={{ fontSize: "24px", marginLeft: "50px" }}>
+    <Tabs defaultActiveKey="0" size="large" centered tabBarStyle={{ fontSize: "24px", marginLeft: "35px" }}>
       {ResultValue}
-    </Tabs>
+    </Tabs> 
   )
-   
 };
+
 
 const About = styled.div`
   padding: 20px;

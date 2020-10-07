@@ -4,7 +4,7 @@ import topImg from "../img/about-1.jpg"
 
 const About = () => {
   return(
-    <section style={sectionStyle}>
+    <section style={sectionStyle} name="about">
       <Container>
         <article style={articleStyle}>
           <TitleImg src={topImg} />

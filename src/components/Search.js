@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import drink from "../json/drink.json"; 
+import drink from "../json/drink.json";
 import { Tabs } from 'antd';
 import Result from "../result/Result";
 
@@ -9,7 +9,8 @@ const Search = () => {
   const [openBox, setBox] = useState(false);
   const [searchAuto, setsearchAuto] = useState("");
   const [searchComponent, setSearchComponent] = useState(false);
-  const [ searchValue, setSearchValue ] = useState("");
+  const [searchValue, setSearchValue] = useState("");
+  const [DBOpen, setDB] = useState(false);
 
   const DropdownBox = styled.div`
     box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.2);
@@ -43,7 +44,7 @@ const Search = () => {
       setsearchAuto("검색 결과가 없습니다.");
     }
 
-    if(!value) {
+    if (!value) {
       setSearchComponent(false);
     }
   };
@@ -51,7 +52,9 @@ const Search = () => {
   const search = () => {
     setSearchComponent(true);
     setSearchValue(searchAuto);
-    console.log(searchComponent);
+    setTimeout(function() {
+      window.scroll({ top: 2500, left: 0, behavior: 'smooth' });
+    }, 100);
   }
 
   const enterkey = () => {
@@ -60,9 +63,33 @@ const Search = () => {
     }
   }
 
-  console.log(searchValue);
-  console.log(searchAuto)
+  const DBList = drink.dbList.map((v, i) => {
+    return(
+    <button key={i} onClick={() => {
+      const dbInput = document.getElementById("searchInput");
+      dbInput.value = v.list;
+      dbInput.value ? setBox(true) : setBox(false);
 
+      if (beerText.includes(dbInput.value)) {
+        setsearchAuto("맥주");
+      } else if (sojuText.includes(dbInput.value)) {
+        setsearchAuto("소주");
+      } else if (makgeolliText.includes(dbInput.value)) {
+        setsearchAuto("막걸리");
+      }
+      else {
+        setBox(false);
+        setsearchAuto("검색 결과가 없습니다.");
+      }
+
+      if (!dbInput.value) {
+        setSearchComponent(false);
+      }
+
+    }}>{v.list}</button>
+    )
+  })
+ 
   return (
     <section>
       <Container>
@@ -80,24 +107,68 @@ const Search = () => {
             <DropdownBox onClick={search} id="dropdownBox">{searchAuto}</DropdownBox>
             <SearchButton onClick={search}>검색</SearchButton>
           </InputForm>
-          
+          <DBButton onClick={() => {
+            setDB(true);
+            if(DBOpen) setDB(false);
+          }}>
+              FooDrink DB
+          </DBButton>
+          {DBOpen && <DBDiv>{DBList}</DBDiv>}
         </div>
       </Container>
-      <ResultContainer>
-        {searchComponent && 
+      {searchComponent &&
+        <ResultContainer>
           <div>
-            <p>{searchValue}</p>
-              {openBox && <Result value={searchAuto} /> }
+            <p>{searchAuto}</p>
+            {openBox && <Result value={searchAuto} />}
           </div>
-        }
-        
-      </ResultContainer>
+        </ResultContainer>
+      }
     </section>
   );
 };
 
+const DBButton = styled.button`
+  width: 150px;
+  font-size: 18px;
+  background-color: #3c9eff;
+  border: 2px solid #fff;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  font-weight: bold;
+  :hover {
+    color: #3c9eff;
+    background-color: white;
+  }
+` 
 
-const ResultContainer = styled.div `
+const DBDiv = styled.div `
+  padding: 30px 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  >button {
+    width: 80px;
+    margin: 10px;
+    background-color: #3c9eff;
+    border: 2px solid #fff;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    :hover {
+      color: #3c9eff;
+      background-color: white;
+    }
+  }
+`
+
+
+const ResultContainer = styled.div`
   width: 100%;
   background-color: white;
   display: flex;
@@ -116,8 +187,9 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   background-color: #3c9eff;
-  padding: 100px 0;
   text-align: center;
+  align-items: center;
+  height: 100vh;
 `;
 
 const SearchTitle = styled.p`
@@ -138,7 +210,7 @@ const InputForm = styled.div`
   }
 `;
 
-const SearchButton = styled.button `
+const SearchButton = styled.button`
   width: 70px;
   height: 70px;
   font-weight: bold;
