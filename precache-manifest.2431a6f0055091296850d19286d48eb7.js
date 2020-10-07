@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0d3b8b97cc851f15ccb1e3038f7778d8",
+    "revision": "6de218ed2f53f7f205ab6cfaed716b6f",
     "url": "/fooDrink/index.html"
   },
   {
-    "revision": "9606d1bacdc19904b861",
-    "url": "/fooDrink/static/js/2.c6ed97f3.chunk.js"
+    "revision": "90d41e65e2d5f8bdeec4",
+    "url": "/fooDrink/static/js/2.e66871e8.chunk.js"
   },
   {
-    "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/fooDrink/static/js/2.c6ed97f3.chunk.js.LICENSE.txt"
+    "revision": "3453b8997016469371284a28c0e873e2",
+    "url": "/fooDrink/static/js/2.e66871e8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7cee54934996dfb5956d",
-    "url": "/fooDrink/static/js/main.3f6ac16b.chunk.js"
+    "revision": "32653137b70118a99ae4",
+    "url": "/fooDrink/static/js/main.8632506c.chunk.js"
   },
   {
-    "revision": "96d4fa36a5f877a4eeaf",
-    "url": "/fooDrink/static/js/runtime-main.52500c58.js"
+    "revision": "916aa78c87786abb45d7",
+    "url": "/fooDrink/static/js/runtime-main.a99a3a92.js"
   },
   {
     "revision": "5f6870ce9436c07c93dc3e77aa6213bc",
