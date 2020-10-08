@@ -25,8 +25,8 @@ function App() {
         <Route path="/" component={Nav} /> 
         <Route path="/foodRink" exact component={Home} />
         <Route path="/foodRink" exact component={About} />
-        <Route path="/foodRink" exact component={ContractUS} />
-        <Route path="/search" component={Search} />
+        <Route path="/fooDrink" exact component={ContractUS} />
+        <Route path="/fooDrink/search" component={Search} />
         <Route path="/" component={Footer} /> 
       </Router>
     </div>
