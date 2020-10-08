@@ -7,7 +7,7 @@ function Home({history}) {
     <TextDiv>
       <ColorOverlay>
         <p>FooDrink</p>
-        <StartBtn onClick={() => history.push('/search')}>FooDrink <br /> 시작하기</StartBtn>
+        <StartBtn onClick={() => history.push('/fooDrink/search')}>FooDrink <br /> 시작하기</StartBtn>
       </ColorOverlay>
     </TextDiv>
   );
