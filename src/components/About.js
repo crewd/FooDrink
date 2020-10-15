@@ -5,7 +5,7 @@ import topImg from "../img/about-1.jpg"
 const About = () => {
   return(
     <section style={sectionStyle} name="about">
-      <Container>
+      <Container id="about">
         <article style={articleStyle}>
           <TitleImg src={topImg} />
           <TextDiv>
@@ -28,10 +28,6 @@ const sectionStyle = {
 const articleStyle = {
   display: "flex",
   justifyContent: "space-between"
-}
-
-const spacediv = {
-  width: "50px"
 }
 
 const Container = styled.div `

@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import drink from "../json/drink.json";
-import { Tabs } from 'antd';
 import Result from "../result/Result";
 
 
@@ -9,7 +8,6 @@ const Search = () => {
   const [openBox, setBox] = useState(false);
   const [searchAuto, setsearchAuto] = useState("");
   const [searchComponent, setSearchComponent] = useState(false);
-  const [searchValue, setSearchValue] = useState("");
   const [DBOpen, setDB] = useState(false);
 
   const DropdownBox = styled.div`
@@ -27,6 +25,9 @@ const Search = () => {
   const beerText = ["맥", "맥ㅈ", "맥주"];
   const sojuText = ["소", "소ㅈ", "소주"];
   const makgeolliText = ["막", "막ㄱ", "막거", "막걸", "막걸ㄹ", "막걸리"];
+  const jokbal = ["족", "족ㅂ", "족바", "족발"];
+  const yangkkochi = ["양", "양ㄲ", "양꼬", "양꼬ㅊ", "양꼬치"];
+  const chicken = ["치", "치ㅋ", "치키", "치킨"];
 
   const inputSearch = (e) => {
     const value = e.target.value;
@@ -38,6 +39,12 @@ const Search = () => {
       setsearchAuto("소주");
     } else if (makgeolliText.includes(value)) {
       setsearchAuto("막걸리");
+    } else if (jokbal.includes(value)) {
+      setsearchAuto("족발");
+    } else if (chicken.includes(value)) {
+      setsearchAuto("치킨");
+    } else if (yangkkochi.includes(value)) {
+      setsearchAuto("양꼬치");
     }
     else {
       setBox(false);
@@ -51,7 +58,6 @@ const Search = () => {
 
   const search = () => {
     setSearchComponent(true);
-    setSearchValue(searchAuto);
     setTimeout(function() {
       window.scroll({ top: 2500, left: 0, behavior: 'smooth' });
     }, 100);
@@ -76,7 +82,14 @@ const Search = () => {
         setsearchAuto("소주");
       } else if (makgeolliText.includes(dbInput.value)) {
         setsearchAuto("막걸리");
-      }
+      } else if (yangkkochi.includes(dbInput.value)) {
+        setsearchAuto("양꼬치");
+      } else if (jokbal.includes(dbInput.value)) {
+        setsearchAuto("족발");
+      } else if (chicken.includes(dbInput.value)) {
+        setsearchAuto("치킨");
+      } 
+      
       else {
         setBox(false);
         setsearchAuto("검색 결과가 없습니다.");

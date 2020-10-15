@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 function Nav({ history }) {
@@ -14,15 +13,6 @@ function Nav({ history }) {
       setnavColor(false);
     }
   });
-
-  
-
-  const scrollAbout = () => {
-    window.addEventListener("scroll", () => {
-      const location = document.querySelector("#about").offsetTop;
-      window.scrollTo({top:location, behavior:'smooth'});
-    })
-  }
 
   const [menu, setMenu] = useState(false);
 
@@ -173,9 +163,7 @@ function Nav({ history }) {
         </MenuBtn>
         <NavUl>
           <li onClick={() => history.push('/fooDrink')}>Home</li>
-          <li onClick={() => history.push('/fooDrink/search')}>Start</li>
-          <li>About</li>
-          <li>Contact Us</li>
+          <li onClick={() => history.push('/fooDrink/search')}>FooDrink</li>
         </NavUl>
       </NavBar>
     </Header>

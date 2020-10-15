@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import drink from "../json/drink.json";
 import { Tabs } from 'antd';
@@ -13,7 +13,16 @@ const Result = ({value}) => {
     FooDrink = drink.소주;
   } else if (value === "막걸리") {
     FooDrink = drink.막걸리;
-  } else {
+  } else if (value === "족발") {
+    FooDrink = drink.족발;
+  } 
+  else if (value === "치킨") {
+    FooDrink = drink.치킨;
+  }
+  else if (value === "양꼬치") {
+    FooDrink = drink.양꼬치;
+  }
+  else {
     FooDrink = drink.noneResult;
   }
 
@@ -25,7 +34,9 @@ const Result = ({value}) => {
     return (
       <TabPane tab={<span style={{ fontSize: 24, textAlign: "center" }}>{v.name}</span>} key={i}>
         <About>
+          <p style={{fontWeight: "bold", fontSize: "21px"}}>특징</p>
           <p>{v.about}</p>
+          <p  style={{fontWeight: "bold", fontSize: "21px"}}>페어링</p>
           <p>{v.pairing}</p>
         </About>
       </TabPane>
